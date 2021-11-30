@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="zuul-server" />
+        <module name="auth-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="auth-service" target="1.8" />
+      <module name="cartItem-category-service" target="1.8" />
+      <module name="customerservice" target="1.8" />
+      <module name="discoveryserver" target="1.8" />
+      <module name="orderservice" target="1.8" />
+      <module name="product-category-service" target="1.8" />
+      <module name="productservice" target="1.8" />
+      <module name="shop-service" target="11" />
+      <module name="zuul-server" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="auth-service" options="-parameters" />
+      <module name="cartItem-category-service" options="-parameters" />
+      <module name="customerservice" options="-parameters" />
+      <module name="discoveryserver" options="-parameters" />
+      <module name="orderservice" options="-parameters" />
+      <module name="product-category-service" options="-parameters" />
+      <module name="productservice" options="-parameters" />
+      <module name="shop-service" options="-parameters" />
+      <module name="zuul-server" options="-parameters" />
+    </option>
+  </component>
+</project>

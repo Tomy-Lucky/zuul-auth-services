@@ -1,0 +1,44 @@
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+
+zuul:
+  routes:
+    card-service:
+      service-id: CARD-PAYMENT-SYSTEM
+      path: /card-detail/**
+      strip-prefix: 'false'
+
+    client-service:
+      path: /client/**
+      service-id: CLIENT-SERVICE
+      strip-prefix: 'false'
+
+    order-service:
+      path: /purchase/**
+      service-id: ORDER-LIST
+      strip-prefix: 'false'
+      sensitive-headers: Cookie,Set-Cookie
+
+    auth-service:
+      path: /auth/**
+      service-id: AUTH-SERVICE
+      strip-prefix: 'false'
+      sensitive-headers: Cookie,Set-Cookie
+
+  sensitiveHeaders: Cookie,Set-Cookie
+  ignored-services: '*'
+  ribbon:
+    eager-load:
+      enabled: 'true'
+
+ribbon:
+  ReadTimeout: '60000'
+
+server:
+  port: 8762
+
+spring:
+  application:
+    name: zuul-server
